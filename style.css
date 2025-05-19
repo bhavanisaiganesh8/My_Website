@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+  transition: background-color 0.5s ease;
+}
+
+section:hover {
+  background-color: #1a1f24;
+}
+
+h1, h2 {
+  color: #58a6ff;
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+  color: #1f6feb;
+}
+
+.hero {
+  background: radial-gradient(circle at center, #1f1f1f 0%, #2d2d2d 100%);
+  padding: 100px 20px;
+  animation: fadeIn 2s ease-in;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 20px rgba(88, 166, 255, 0.2);
+}
+
+.about, .skills, .gallery, .timeline, .contact {
+  background-color: #161b22;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+  animation: sectionFade 1s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li, .timeline li {
+  padding: 8px 0;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.skills li:hover, .timeline li:hover {
+  transform: scale(1.05);
+  color: #58a6ff;
+}
+
+.gallery .images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.gallery img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #1f6feb;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sectionFade {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Scroll reveal */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow Effect */
+.hero h1 {
+  text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff;
+}
