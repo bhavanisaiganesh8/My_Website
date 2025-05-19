@@ -34,6 +34,14 @@ h1:hover, h2:hover {
   box-shadow: 0 5px 20px rgba(88, 166, 255, 0.2);
 }
 
+/* ✅ Logo size and alignment */
+.hero img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
 .about, .skills, .gallery, .timeline, .contact {
   background-color: #161b22;
   margin: 20px auto;
